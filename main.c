@@ -1,14 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 static int totalNum=0;
-
-add(){}//←頑張って
+int num[100];
+add(){
+	for(int i=0;)
+}//←頑張って
 sub(){}//←頑張って
 mult(){}//←頑張って
 divi(){}//←頑張って
 
 int analysis(char[]);
-void countNumber();
 
 int main(){
 	char formula[100];
@@ -52,6 +54,7 @@ int main(){
 int analysis(char a[]) /* 入力された式から数だけを抜き出す */
 {
 	for(int i=0;i<100;i++){
+		switch(formula[i]){
 			case '+':
 				continue;
 			case '-':
@@ -68,13 +71,10 @@ int analysis(char a[]) /* 入力された式から数だけを抜き出す */
 				//空白を無視
 				continue;
 			default:
-				countNumber();//ここで引数として処理する数を数える。
+				num[i]=atoi(formula[i]);
+				/*countNumber();*/ //ここで引数として処理する数を数える。
 				/*return a[i];*/
 				continue;
-	}
-	
-	void countNumber(){
-	totalNum++;
-	return 0;
+		}
 	}
 }
