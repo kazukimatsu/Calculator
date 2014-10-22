@@ -4,11 +4,25 @@
 static int totalNum=0;
 int num[100];
 add(){
-	for(int i=0;)
+	for(int i=0;i<100;i++){
+	ans+=num[i];
+	}
 }//←頑張って
-sub(){}//←頑張って
-mult(){}//←頑張って
-divi(){}//←頑張って
+sub(){
+	for(int i=0;i<100;i++){
+	ans-=num[i];
+	}
+}//←頑張って
+mult(){
+	for(int i=0;i<100;i++){
+	ans*=num[i];
+	}
+}//←頑張って
+divi(){
+	for(int i=0;i<100;i++){
+	ans/=num[i];
+	}
+}//←頑張って
 
 int analysis(char[]);
 
@@ -71,9 +85,7 @@ int analysis(char a[]) /* 入力された式から数だけを抜き出す */
 				//空白を無視
 				continue;
 			default:
-				num[i]=atoi(formula[i]);
-				/*countNumber();*/ //ここで引数として処理する数を数える。
-				/*return a[i];*/
+				num[i]=atoi(formula[i]);//char型からint型に変換
 				continue;
 		}
 	}
