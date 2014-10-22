@@ -75,6 +75,6 @@ int analysis(char a[]) /* 入力された式から数だけを抜き出す */
 	
 	void countNumber(){
 	totalNum++;
-	return;
+	return 0;
 	}
 }
