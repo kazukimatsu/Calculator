@@ -4,6 +4,9 @@ add(){}//←頑張って
 sub(){}//←頑張って
 mult(){}//←頑張って
 divi(){}//←頑張って
+stack(num[]){
+
+}
 
 int main(){
 	char formula[100];
@@ -12,15 +15,14 @@ int main(){
 	printf("数式を入力してください。\n");
 	scanf("%s",&formula);
 
-	int i;
+	int i=0;
 	while(i<=100){
 		switch(formula[i]){
 			case '+':
 				add();
 				break;
 			case '-':
-				sub();
-				break;
+				sub();				break;
 			case '*':
 				mult();
 				break;
@@ -36,6 +38,8 @@ int main(){
 			case ' ':
 				//空白を無視
 				break;
+			default:
+				stack(formula[i]);
 		}
 		i++;
 	}
