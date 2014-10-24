@@ -92,7 +92,7 @@ int analysis(char a[]) /* 入力された式から数だけを抜き出す */
 				//空白を無視
 				continue;
 			default:
-				num[i]=atoi(a[i]);//char型からint型に変換
+				num[i]=atoi(%d,a[i]);//char型からint型に変換
 				continue;
 		}
 	}
