@@ -4,32 +4,33 @@
 static int totalNum=0;
 int num[100];
 int i;
-double ans;
+int count=0;
+double ans=0;
 
 add(){
 	i=0;
 	for(i=0;i<100;i++){
 	ans+=num[i];
 	}
-}//←頑張って
+}//←頑張ったぞう
 sub(){
 	i=0;
 	for(i=0;i<100;i++){
 	ans-=num[i];
 	}
-}//←頑張って
+}//←頑張ったぞう
 mult(){
 	i=0;
 	for(i=0;i<100;i++){
 	ans*=num[i];
 	}
-}//←頑張って
+}//←頑張ったぞう
 divi(){
 	i=0;
 	for(i=0;i<100;i++){
 	ans/=num[i];
 	}
-}//←頑張って
+}//←適当だぞう
 
 int analysis(char[]);
 
@@ -41,6 +42,7 @@ int main(){
 	scanf("%s",&formula);
 
 	int i;
+	analysis(formula);
 	while(i<=100){
 		switch(formula[i]){
 			case '+':
@@ -67,7 +69,7 @@ int main(){
 		}
 		i++;
 	}
-	ans = 0;
+	//ans = 0;
 	printf("formula=%s,ans=%d\n",formula, ans);
 	return 0;
 }
@@ -92,7 +94,10 @@ int analysis(char a[]) /* 入力された式から数だけを抜き出す */
 				//空白を無視
 				continue;
 			default:
-				num[i]=atoi(%d,a[i]);//char型からint型に変換
+				count++;
+				char t[1];
+				strncpy( t, a+i, 1 );
+				num[i]=atoi(t);
 				continue;
 		}
 	}
