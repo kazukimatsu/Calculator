@@ -41,7 +41,7 @@ int main(){
 	printf("数式を入力してください。\n");
 	scanf("%s",&formula);
 
-	int i;
+	int i=0;
 	analysis(formula);
 	while(i<=100){
 		switch(formula[i]){
