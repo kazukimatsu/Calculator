@@ -34,7 +34,13 @@ int main()
 			// printf("nums[]:%1.1f\n", nums[0]);//d	
 			siki[i-1] = ' ';
 		}
-		if(siki[i-1] == '')
-	}
+		if(siki[i-1] == ''){
+			printf("siki:%s\n", siki);
+			while(nums[j] != ' '){
+			printf("%1.1f\n", nums[j]);
+			j++;
+		}
+	printf("footer:%d\n", i);
 
+	return 0;
 }
