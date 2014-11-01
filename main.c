@@ -2,7 +2,6 @@
 //dはデバック処理用
 **この辺のことはそのうちreadmeに移ります。
 */
-
 #include <stdio.h>
 #include <string.h>
 
@@ -20,7 +19,6 @@ int main()
 		nums[i] = ' ';
 	}
 //ここまで初期化----------------------------------------------------
-
 	while((siki[fptr++] = getchar()) != '\n'){
 		printf("%d\n", siki[fptr-1]);	//d
 		printf("siki~:%s\n", siki);	//d
