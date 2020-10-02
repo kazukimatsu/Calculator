@@ -100,6 +100,6 @@ void check_action_stack() {
 int main() {
 	yylex();
 	sum();
-	printf("ans = %d\n", ans);
+	printf("Answer = %d\n", ans);
 	return 0;
 }
